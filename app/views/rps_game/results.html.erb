@@ -1,0 +1,17 @@
+<%= render TurboModalComponent.new do %>
+  <h2><%= @result %></h2>
+  <h1><%= @description %></h1>
+
+	<div class="results">
+		<div class="centre-align">
+		  <div class="column">
+		    <%= image_tag(@bet, alt: @bet) %>
+		    <p>Your Bet</p>
+		  </div>
+		  <div class="column">
+		    <%= image_tag(@enemy, alt: @enemy) %>
+		    <%= image_tag('curb_logo.png', alt: 'curb', class: 'curb-logo') %>
+		  </div>
+		</div>
+	</div>
+<% end %>
