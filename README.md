@@ -1,24 +1,33 @@
-# README
+# Rock Paper Scissor
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple rps game with web UI. Integrated CURB returns some random throw as your opponent. 
 
-Things you may want to cover:
+## Architecture and models
 
-* Ruby version
+Rails: 7.0.4
+Ruby: 3.1.2
+TurboFrame
+StimulusJS
 
-* System dependencies
+## How to run
 
-* Configuration
+- Clone repo `git clone git@github.com:mihailAkorr/rps.git`
 
-* Database creation
+### As local rails app
 
-* Database initialization
+- Run `bundle` 
+- Run `rails s`
+- Navigate to `localhost:3000`
 
-* How to run the test suite
+### Docker
 
-* Services (job queues, cache servers, search engines, etc.)
+- Run `docker-compose build`
+- Run `docker-compose up`
+- Navigate to `localhost:3000`
 
-* Deployment instructions
+## Tests
 
-* ...
+i used rspec tests
+
+- For docker you can use `docker-compose run -e "RAILS_ENV=test" app bundle exec rspec ./spec`
+- In local `rspec ./spec`
