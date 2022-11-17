@@ -63,6 +63,8 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   # debugger call 'binding.pry'
   gem 'pry-byebug'
+  #  RSpec testing framework for Ruby on Rails
+  gem 'rspec-rails', '~> 6.0.0'
 end
 
 group :development do
@@ -81,6 +83,7 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'webmock'            # Allows stubbing HTTP requests and setting expectations on HTTP requests
 end
 
 gem 'view_component', '~> 2.75'
