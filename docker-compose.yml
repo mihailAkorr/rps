@@ -1,0 +1,13 @@
+app:
+  build: .
+  environment:
+    RAILS_ENV: development
+  ports:
+    - '3000:3000'
+  volumes_from:
+    - appdata
+
+appdata:
+  image: tianon/true
+  volumes:
+    - ".:/rps"
