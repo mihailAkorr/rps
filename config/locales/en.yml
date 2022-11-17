@@ -31,3 +31,8 @@
 
 en:
   hello: "Hello world"
+  rps_battle:
+    win: 'You Won!'
+    lose: 'You lose!'
+    tie: 'Tie!'
+    unknown: "Who's that?"
