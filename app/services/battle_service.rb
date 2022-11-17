@@ -41,14 +41,14 @@ class BattleService
   def calculate_results
     # takes reversed index from condidion array
     index = CONTIDIONS.index(@enemy)
-    # by 'index - 1', we ll know what type of weapon is win for user
+    # by 'index - 1', we ll know what type of weapon is win for a user
     win_condition = CONTIDIONS[index - 1]
 
-    # check if its a matching weapon for user win, if not user lose
+    # check if its a matching weapon for user win, if not, user lose
     I18n.t(@user == win_condition ? 'rps_battle.win' : 'rps_battle.lose')
   end
 
-  # unknown weapon type! 
+  # unknown weapon type!
   def unknown_among_us?
     [@user, @enemy].include? UNKNOWN
   end
