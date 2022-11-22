@@ -16,6 +16,7 @@ StimulusJS
 ### As local rails app
 
 - Run `bundle` 
+- Run `rake db:create`
 - Run `rails s`
 - Navigate to `localhost:3000`
 
