@@ -1,3 +1,18 @@
+mysql:
+  image: mysql
+  ports:
+    - "3306:3306"
+  volumes_from:
+    - dbdata
+  environment:
+    - MYSQL_ROOT_PASSWORD=root
+    - MYSQL_DATABASE=dev
+
+dbdata:
+  image: tianon/true
+  volumes:
+    - /var/lib/mysql
+
 app:
   build: .
   environment:
@@ -6,6 +21,8 @@ app:
     - '3000:3000'
   volumes_from:
     - appdata
+  links:
+    - "mysql"
 
 appdata:
   image: tianon/true
